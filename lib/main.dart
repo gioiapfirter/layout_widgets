@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 50.0,
-              backgroundImage: AssetImage('images/profile.JPG'),
+              backgroundImage: AssetImage('profile.JPG'),
             ),
             Text(
-              'Gioia Louisa',
+              'Gioia Annika',
               style: TextStyle(
                 fontFamily: 'Pacifico',
                 fontSize: 40,
