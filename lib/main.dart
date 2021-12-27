@@ -1,33 +1,27 @@
-
-
+import 'homepage.dart';
+import 'workoutlist.dart';
+import 'recipelist.dart';
 import 'package:flutter/material.dart';
 
-main() => runApp(MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.lightBlue,
-        body: SafeArea(
-            child: Column(
-          children: [
-            CircleAvatar(
-              radius: 50.0,
-              backgroundImage: AssetImage('profile.JPG'),
-            ),
-            Text(
-              'Gioia Annika',
-              style: TextStyle(
-                fontFamily: 'Pacifico',
-                fontSize: 40,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-            )
-          ],
-        )),
-      ),
-    );
+        title: 'FitCHICK',
+        theme: ThemeData(
+          primarySwatch: Colors.green,
+        ),
+        routes: <String, WidgetBuilder>{
+          "/": (BuildContext context) => const HomePage(),
+          "/fitness": (BuildContext context) => const WorkoutListPage(),
+          "/recipes": (BuildContext context) => const RecipeListPage(),
+        });
   }
 }
