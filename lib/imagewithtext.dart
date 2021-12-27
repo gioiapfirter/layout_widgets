@@ -25,7 +25,7 @@ class ImageWithText extends StatelessWidget {
               image: DecorationImage(
                   colorFilter: ColorFilter.mode(
                       Colors.black.withOpacity(0.4), BlendMode.dstATop),
-                  image: AssetImage('lib/images/' + image),
+                  image: AssetImage('images/' + image),
                   fit: BoxFit.cover)),
         ));
   }
