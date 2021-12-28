@@ -28,7 +28,7 @@ class RecipeListPage extends StatelessWidget {
         backgroundColor: Colors.green.shade100,
         appBar: AppBar(
           backgroundColor: Colors.green.shade800,
-          title: const Text("FitCHICK"),
+          title: const Text("Rezepte"),
           centerTitle: true,
         ),
         body: ListView(
