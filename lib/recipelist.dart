@@ -7,10 +7,10 @@ class RecipeListPage extends StatelessWidget {
   const RecipeListPage({Key? key}) : super(key: key);
 
   List<Widget> createRecipeCards(BuildContext context) {
-    List<ListTile> cards = [];
+    List<Card> cards = [];
 
     for (var recipe in Recipe.list) {
-      cards.add(ListTile(
+      cards.add(Card(child: ListTile(
         title: Text(recipe.title),
         subtitle: Text(recipe.description),
         leading: Image.asset(
@@ -24,7 +24,7 @@ class RecipeListPage extends StatelessWidget {
             MaterialPageRoute(
               builder: (context) => RecipeDetailPage(recipe: recipe,)));
         },
-      ));
+      )));
     }
     return cards;
   }
