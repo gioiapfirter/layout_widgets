@@ -1,6 +1,7 @@
 import 'workout.dart';
 import 'textcard.dart';
 import 'cardwithtitle.dart';
+import 'cardwithtitleleft.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
@@ -36,7 +37,7 @@ class WorkoutDetailPage extends StatelessWidget {
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          CardWithTitle("Trainierte Muskelgruppen",
+                          CardWithTitleLeft("Trainierte Muskelgruppen",
                               workout.trainedMuscleGroups.join("\n")),
                           Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
