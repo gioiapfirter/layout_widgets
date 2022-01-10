@@ -32,7 +32,7 @@ class MyApp extends StatefulWidget {
 
 class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   late TabController controller;
-
+  
   @override
   void initState() {
     super.initState();
@@ -47,6 +47,7 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       body: TabBarView(
         children: const <Widget>[HomePage(), RecipeListPage(), WorkoutListPage(), LoginPage(),],
@@ -55,7 +56,7 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
 
       // Set the bottom navigation bar
       bottomNavigationBar: Material(
-        color: Colors.blue,
+        color: Colors.green.shade800,
         child: TabBar(
           tabs: const <Tab>[
             Tab(

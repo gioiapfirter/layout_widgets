@@ -24,6 +24,7 @@ class HomePage extends StatelessWidget {
                   child: ImageWithText("Ernährung", "recipes.jpg", "/recipes")),
             ],
           ),
-        ));
+        )
+    );
   }
 }

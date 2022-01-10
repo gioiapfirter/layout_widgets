@@ -17,6 +17,7 @@ class _State extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.green.shade800,
           title: const Text('FitCHICK - Login'),
         ),
         body: Padding(
