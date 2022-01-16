@@ -5,6 +5,7 @@ import 'package:layout_widgets/loginpage.dart';
 import 'homepage.dart';
 import 'workoutlist.dart';
 import 'recipelist.dart';
+import 'statisticspage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +18,7 @@ void main() {
           "/home": (BuildContext context) => const HomePage(),
           "/fitness": (BuildContext context) => const WorkoutListPage(),
           "/recipes": (BuildContext context) => const RecipeListPage(),
+          // "/stats": (BuildContext context) => const StatisticsListPage(),
         },
     home: const MyApp(),
     ),
@@ -36,7 +38,7 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    controller = TabController(length: 4, vsync: this);
+    controller = TabController(length: 5, vsync: this);
   }
 
   @override
@@ -50,7 +52,7 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
     
     return Scaffold(
       body: TabBarView(
-        children: const <Widget>[HomePage(), RecipeListPage(), WorkoutListPage(), LoginPage(),],
+        children: <Widget>[HomePage(), RecipeListPage(), WorkoutListPage(), StatisticsPage(), LoginPage(),],
         controller: controller,
       ),
 
@@ -70,6 +72,10 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
             Tab(
               text: "Fitness",
               icon: Icon(Icons.self_improvement),
+            ),
+            Tab(
+              text: "Statistik",
+              icon: Icon(Icons.leaderboard),
             ),
             Tab(
               text: "An-/Abmelden",

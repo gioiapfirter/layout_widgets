@@ -37,6 +37,12 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
+  # Adds support for drawing charts
+  charts_flutter: ^0.12.0
+
+  # Adds support for calculating the week number from a date
+  week_of_year: ^2.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
